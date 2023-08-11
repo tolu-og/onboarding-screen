@@ -51,7 +51,8 @@ const OnboardingScreen = () => {
             />
           ),
           title: "Package",
-          subtitle: "We Da Best",
+          subtitle:
+            "Mastering the Art of Culinary Care: Unveiling the World of Food Packaging",
         },
         {
           backgroundColor: "#94F3F7",
@@ -61,8 +62,9 @@ const OnboardingScreen = () => {
               className="w-72 h-72 object-contain"
             />
           ),
-          title: "Deliver",
-          subtitle: "We Out!",
+          title: "Delivery",
+          subtitle:
+            "Elevating Delight: The Journey of Safely Packaging Culinary Creations for Delivery",
         },
       ]}
     />

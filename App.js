@@ -1,5 +1,3 @@
-import { StatusBar } from "expo-status-bar";
-import { Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import OnboardingScreen from "./screens/OnboardingScreen";
@@ -10,7 +8,7 @@ import { useEffect, useState } from "react";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const [isFirstLaunch, setisFirstLaunch] = useState(false);
+  const [isFirstLaunch, setisFirstLaunch] = useState(true);
 
   useEffect(() => {
     AsyncStorage.getItem("alreadyLaunched").then((value) => {
@@ -26,13 +24,11 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {isFirstLaunch && (
-          <Stack.Screen
-            options={{ headerShown: false }}
-            name="OnboardingScreen"
-            component={OnboardingScreen}
-          />
-        )}
+        <Stack.Screen
+          options={{ headerShown: false }}
+          name="OnboardingScreen"
+          component={OnboardingScreen}
+        />
         <Stack.Screen
           options={{ headerShown: false }}
           name="HomeScreen"
